@@ -1,0 +1,172 @@
+.hiddenbydisplay {
+  display: none;
+  /* 
+    visibility:hidden은 그냥 안보이게만해줌
+    display:none은 아예 공간도 차지 않도록, 즉 그냥 html에서 아예 사라짐
+    */
+}
+
+.hiddenbyvisibility {
+  visibility: hidden;
+}
+
+#bgi {
+  position: absolute;
+  /* absolute를 사용하면 상위개체가 기준이 됨*/
+  left: 0px;
+  top: 0px;
+  width: 100%;
+
+  /*상위개체 기준 100%*. 일케 하면 그거에 맞게 height가 조절됨*/
+  z-index: -1;
+  /* 일종의 층을 나타내주는 것. z가 더 높을 수록 더 높이 위치했다고 볼 수 있다 
+  예를 들어 z=1인 개체보다 z=2인개체가 더 높이 위치해서 z=1인 개체를 가림*/
+  opacity: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
+    "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: white;
+  margin: 0px;
+  text-shadow: 1px 1px 7px black;
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.weatherandlocation {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 20px;
+  padding-top: 15px;
+  font-size: 1vw;
+  text-shadow: 1px 1px 5px black;
+}
+
+#location {
+  text-align: right;
+  font-size: 1.5vw;
+}
+
+#clock {
+  font-size: 9.2vw;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1.5;
+  text-shadow: 1px 1px 10px black;
+}
+
+.login h1 {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 700;
+  margin-top: 0.4vw;
+  margin-bottom: 0.4px;
+}
+
+#toDoContainer h1 {
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 700;
+  margin-top: 1vw;
+  margin-bottom: 0.4px;
+}
+
+::placeholder {
+  color: darkgrey;
+  text-shadow: 1px 1px 2px black;
+  opacity: 80%;
+  font-weight: 700;
+}
+
+input {
+  display: block;
+  margin: auto;
+  margin-top: 1vw;
+  width: 33%;
+  padding-top: 4px;
+  background: 0;
+  border: 0;
+  border-bottom: 0.25vw solid #fff;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: 700;
+  text-shadow: 0px 0px 3px white;
+}
+
+input:focus {
+  outline: none;
+}
+
+#todo-list {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 2vw;
+}
+
+#todo-list li {
+  font-size: 2vw;
+  margin-top: 0.5vw;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px black;
+}
+
+button {
+  background-image: url("https://creazilla-store.fra1.digitaloceanspaces.com/emojis/45824/check-mark-button-emoji-clipart-sm.png");
+  border-radius: 50px;
+  background-size: cover;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+button:hover {
+  transform: scale(1.15);
+}
+
+.fade-in-box {
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+}
+
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-box-1 {
+  animation: fadein 1s;
+  -webkit-animation: fadein1 1s;
+}
+
+@-webkit-keyframes fadein1 {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out-box {
+  animation: fadeout 3s;
+  -webkit-animation: fadeout 3s;
+}
+
+@-webkit-keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
