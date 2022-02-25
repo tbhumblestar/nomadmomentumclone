@@ -6,7 +6,7 @@ const userNameKey = "username"
 const hiddenclassName = "hiddenbydisplay"
 
 function paint(username){
-    greetingText.innerText = `Hello ${username}! Be a best!`
+    greetingText.innerText = `Hello ${username}! Thank you for coming!!`
 }
 
 function regist(event){//addeventlistener로 작동되는 함수는 무조건 첫번재 인자로 발생된 이벤트에 대한 정보를 담음
