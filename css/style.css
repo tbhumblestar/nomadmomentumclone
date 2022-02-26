@@ -33,6 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 .weatherandlocation {
@@ -51,10 +52,12 @@ body {
 }
 
 #clock {
-  font-size: 9.2vw;
+  margin-top: 7vw;
+  margin-bottom: 3.5vw;
+  font-size: 7vw;
   font-weight: 700;
   text-align: center;
-  margin-top: 1.5;
+
   text-shadow: 1px 1px 10px black;
 }
 

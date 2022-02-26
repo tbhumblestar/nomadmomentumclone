@@ -67,6 +67,6 @@ if (savedTodos){
     /*for each에 사용되는 함수는 addeventlistener처럼 사용되는 함수의 첫번째 인자로, 현재 함수가 작용된 아이템이 뭔지를 보여줌.
     즉, A = [a,b,c]이고 A.foreach(sayhello)는 sayhello(a),sayhello(b),sayhello(c)를 순차적으로 실행하는 것과 같음. 따라서
     사용하려면 addeventlistner처럼, 사용되는 함수에 첫번째 인자칸을 만들어줘야함. 근데 위에보면 writeToDoList함수는 이미 인자로 newToDoObject를 받아서
-    사용중임. 즉, 그냥 쓰면 자연스럽게 각 리스트의 원소가 순차적으로 들어감. arrow function을 쓸수도 있음. 7.4 강의 후반부를 참고*/
+    사용중임. 즉, 그냥 쓰면 자연스럽게 각 리스트의 원소가 순차적으로 들어감. arrow function을 쓸수도 있음.(7.4강의 후반부를 참고)*/
     
 }
