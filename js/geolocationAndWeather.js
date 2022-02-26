@@ -16,7 +16,7 @@ function onGeoSuccess(position){
 }
 
 function onGeoError(){
-    alert("plz let me know..")
+    alert("승인해주세요ㅠㅠ")
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError)
