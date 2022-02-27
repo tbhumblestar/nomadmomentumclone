@@ -10,6 +10,10 @@
   visibility: hidden;
 }
 
+.opacity {
+  opacity: 0;
+}
+
 #bgi {
   position: absolute;
   /* absolute를 사용하면 상위개체가 기준이 됨*/
@@ -36,9 +40,9 @@ body {
 }
 
 .weatherandlocation {
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  position: sticky;
+  top: 1vw;
+  right: 2vw;
   padding: 20px;
   padding-top: 15px;
   font-size: 2vw;
@@ -46,14 +50,24 @@ body {
 }
 
 #location {
+  position: absolute;
+  right: 1vw;
+  font-size: 2vw;
+}
+
+#weather {
+  position: absolute;
+  top: 2.8vw;
+  right: 1vw;
   text-align: right;
   font-size: 2vw;
 }
 
 #clock {
+  position: sticky;
   margin-top: 7vw;
   margin-bottom: 3.5vw;
-  font-size: 7vw;
+  font-size: 4.5vw;
   font-weight: 700;
   text-align: center;
 
@@ -71,6 +85,11 @@ body {
 .fade-in-box-1 {
   animation: fadein 1s;
   -webkit-animation: fadein1 1s;
+}
+
+.fade-in-box-3 {
+  animation: fadein 3s;
+  -webkit-animation: fadein1 3s;
 }
 
 @-webkit-keyframes fadein1 {
@@ -198,9 +217,9 @@ button:hover {
   -webkit-animation: fadein 3s;
 }
 
-.fade-out-box {
-  animation: fadeout 3s;
-  -webkit-animation: fadeout 3s;
+.fade-out-box-2 {
+  animation: fadeout 2s;
+  -webkit-animation: fadeout 2s forwards;
 }
 
 @-webkit-keyframes fadeout {
@@ -209,6 +228,6 @@ button:hover {
     opacity: 1;
   }
   to {
-    opacity: 0;
+    opacity: 0.5;
   }
 }

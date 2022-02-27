@@ -8,6 +8,8 @@ const box2 = document.querySelector("#box2")
 const box2Top = box2.offsetTop
 const box2_title = document.querySelector("#box2_title")
 const box2_letters = document.querySelector("#box2_sentences")
+const box2_and_box3 = document.querySelector("#out_event_box")
+
 
 
 
@@ -17,8 +19,8 @@ function paint(username){
     box2_letters.innerText = 
     `저는 32기 김영빈 이라고 합니다!\n
     데이터를 다루는게 재미있고, 서비스를 뒤에서 든든하게 받쳐주는 느낌이 좋아서 백엔드를 지향하고 있습니다!\n
-    개발자를 결심한 이래로, id를 지을때는 항상 humblebee라는 이름으로 짓는데요\n
-    해야할 때는 늘 든든하게 제몫을 해주는 트랜스포머의 범블비와\n
+    개발자를 결심하고나서부터 id를 지을때는 항상 humblebee라는 이름으로 짓는데요\n
+    해야할 때는 늘 든든하게 제몫을 해주는 트랜스포머의 범블비(bumblebee)와\n
     겸손(humble)을 합친 이름입니다 ㅎㅎ\n
     이름처럼 다재다능하면서 겸손한 백엔드 개발자가 되고 싶습니다!
     `
@@ -53,10 +55,10 @@ if (savedusername !== null){
 const toDoContainer = document.querySelector("#toDoContainer")
 
 function showtoDoForm(){
-    toDoContainer.classList.remove("hiddenbyvisibility")
-    toDoContainer.classList.add("fade-in-box")
-    box2.classList.remove("hiddenbyvisibility")
-    box2.classList.add("fade-in-box")
+    toDoContainer.classList.remove("opacity")
+    toDoContainer.classList.add("fade-in-box-3")
+    box2.classList.remove("opacity")
+    box2.classList.add("fade-in-box-3")
     window.scroll({top:box2Top,behavior:'smooth'})
 }
 
@@ -64,12 +66,21 @@ loginForm.addEventListener("submit",regist)
 loginForm.addEventListener("submit",showtoDoForm)
 
 
+// box2_and_box3.addEventListener("mouseleave",function(){
+//     box2_and_box3.classList.add("fade-out-box-2")
+// })
+
+// box2_and_box3.addEventListener("mouseenter",function(){
+//     box2_and_box3.classList.add("fade-in-box-1")
+// })
+
+
 
 
 if (localStorage.getItem("username") !== null){
-    toDoContainer.classList.remove("hiddenbyvisibility")
-    box2.classList.remove("hiddenbyvisibility")
-    toDoContainer.classList.add("fade-in-box")
-    box2.classList.add("fade-in-box")
+    toDoContainer.classList.remove("opacity")
+    box2.classList.remove("opacity")
+    toDoContainer.classList.add("fade-in-box-3")
+    box2.classList.add("fade-in-box-3")
     window.scroll({top:box2Top,behavior:'smooth'})
 }
